@@ -1,0 +1,740 @@
+/*
+* ----------------------------------------------------------------------------------------
+Author       : Indira Huseinagic                                                    
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01. GENERAL CSS STYLE
+* 02. MENU AREA CSS STYLE
+* 03. HEADER AREA CSS STYLE
+* 04. ABOUT ME CSS STYLE
+* 05. PROJECTS CSS STYLE
+* 06. CONTACT ME CSS STYLE
+* 07. FOOTER AREA CSS STYLE
+* 08. MEDIA QUERY CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 01.GENERAL
+* ----------------------------------------------------------------------------------------
+*/
+:root {
+    --mainColor:#5db204;
+    --mainColorDark: #448104;
+    --secondColor: #222a35;
+    --secondColorLight:  #2a323c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+    padding: 0 5vw;
+}
+
+.btn {
+    border-radius: 5px; 
+    padding: 8px 23px; 
+}
+
+.btn:focus {
+    outline-color: var(--mainColor)!important;
+    box-shadow: none!important;
+}
+
+.btn-basic {
+    background-color: var(--mainColor); 
+    border: 2px solid var(--mainColor); 
+    color: #fff;   
+}
+
+.btn-basic:hover {
+    color: var(--mainColor); 
+    background-color: transparent;
+    border: 2px solid var(--mainColor); 
+}
+
+.btn-second {
+    background-color: var(--secondColor);
+    border: 2px solid var(--secondColor); 
+    color: #fff; 
+}
+
+.btn-second:hover {
+    color: var(--secondColor); 
+    background-color: transparent;
+    border: 2px solid var(--secondColor); 
+}
+
+section {
+    padding-bottom: 70px;
+    width: 100%;    
+}
+
+section:nth-of-type(3) {  /*contact section*/
+   background-color: var(--secondColor);
+}
+
+.section-title {
+     font-size: 40px;
+     font-weight: 600;
+     margin-bottom: 30px;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.MENU AREA
+* ----------------------------------------------------------------------------------------
+*/
+.nav-link {
+    color:#fff !important;
+    font-weight: 500;
+}
+
+.nav-link.active {
+    color: var(--mainColor) !important;
+    font-weight: 700;
+}
+
+.navbar-toggler i {
+    color: #fff;
+    font-size: 25px;
+}
+   
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+}
+
+.navbar-brand {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    font-family: 'Cookie', cursive;
+    color: #fff;
+    background-color: var(--mainColor);
+    padding: 0 4px;
+    font-size: 20px;
+}
+
+a.navbar-brand:hover {
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------------------------------
+* 03.HEADER
+* ----------------------------------------------------------------------------------------
+*/
+.header-area {    
+    background: url(.././img/mobile.jpeg) no-repeat;  
+    background-size: cover;
+    position: relative;
+    width:100%;
+    height: 100vh;
+    background-position: center center;
+    background-attachment: scroll; 
+}
+
+.header-area::after {
+    content: "";
+    background: #000;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: .7;
+}
+
+.header-text {
+    position: absolute;
+    left: 10%;
+    top: 35%;
+    color: #fff;
+    z-index: 3;
+}
+
+.btn-header {
+    opacity: 0;
+}
+
+.header-text .text-1,
+.header-text .text-2,
+.header-text .text-3 {
+     animation: content-active 2s ease;
+     animation-fill-mode: forwards;
+}
+
+.header-text .btn-header {
+     animation: content-active 2s ease 1s;
+     animation-fill-mode: forwards;
+}
+
+@keyframes content-active {
+     0% {opacity: 0;}
+    100% {opacity: 1;}
+} 
+
+.header-text .text-1 {
+    font-size: 1.5em; 
+}
+
+.header-text .text-2 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.header-text .text-3 {
+    margin-bottom: 20px;
+}
+
+.header-text .btn-basic:hover {
+    color: #fff;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04.ABOUT
+* ----------------------------------------------------------------------------------------
+*/
+.my-info {
+    text-align: justify;
+    background-color: #e9ecef;
+    padding: 20px;
+}
+
+.my-info img {
+    border-radius: 100%;
+}
+
+.skills-title {
+    margin-bottom: 15px;
+}
+
+.skills-title:first-child  {
+    margin-top: 20px;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 0;
+}
+
+.progress-bar {
+    background-color: var(--mainColor);
+    padding-bottom: 50px;
+}
+
+#about .section-title {
+    padding-top: 70px;
+}
+
+#about {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#about.about-active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+  
+/*
+* ----------------------------------------------------------------------------------------
+* 05.PROJECT
+* ----------------------------------------------------------------------------------------
+*/
+
+.project-box {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px; 
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
+}
+   
+.project-box-content {
+    color: #fff;
+    opacity: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: 0;
+    left:0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.35s;
+}
+  
+.project-box-content:hover {
+    opacity: 1;
+    width: 100%;
+}
+  
+.project-text {
+    width: 100%;
+    position: relative;
+}
+
+.project-title {
+    font-size: 25px;
+    color: var(--mainColor);
+    font-weight: 600;
+}
+  
+.btn-project {
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 0;
+    margin: 20px;
+    padding: 5px 25px;
+}
+
+.btn-project:hover,
+.btn-project:focus, 
+.btn-project:active {
+    background-color: var(--mainColor);
+    color: white;
+    border: 0;
+}
+
+#portfolio {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#portfolio.portfolio-active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    position: fixed;
+    top: 30vh;
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    position: fixed;
+    top: 30vh;   
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 5%;   
+}
+
+.carousel-inner {
+    width: 100%;
+}
+
+.modal {
+    padding-right: 0!important;
+}
+
+.modal-dialog {
+    max-width: 100%;
+    width: 100vw;
+    min-height: 100vh; 
+    margin:0;
+}
+
+.modal-backdrop {
+    z-index: 1040 !important;
+}
+
+.modal-content {
+    margin: 0 auto;
+    z-index: 1100 !important;
+    border-radius: 0!important;
+    min-height: 100vh; 
+}
+
+.close-modal {
+    position: absolute;
+    z-index: 1050;
+    right: 0;
+    background-color: var(--mainColor);
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    padding: 5px 10px;
+}
+
+.close-modal:hover,
+.close-modal:active {
+    background-color: var(--mainColorDark);
+    outline: none;
+}
+
+.project-show .btn-basic,
+.project-show .btn-second {
+    border-radius: 20px;
+}
+
+.project-description {
+    text-align: justify;
+}
+
+.description {
+    padding: 30px 40px;
+}
+
+.carousel-item hr {
+    border: 1px solid #000;
+}
+
+.item-card {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    font-size: 80%;
+}
+
+.item-card i {
+    color: var(--mainColor);
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.item-card p {
+    color: #768292;
+}
+
+.technology-icons {
+    color: var(--secondColor);
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.technology-icons i {
+    margin: 5px;
+}
+
+.project-tech {
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 06.CONTACT
+* ----------------------------------------------------------------------------------------
+*/
+#contact {
+    color: #fff;
+}
+
+#contact .section-title {
+    padding-top: 70px;
+}
+
+#contact-form {
+    width:100%;
+    margin:20px auto;
+}
+
+.form-control {
+    background-color:  var(--secondColorLight);
+    border:0; 
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+#contact-form .btn-basic {
+    margin-top: 10px;
+}
+
+.contact-info {
+    margin: 20px auto;
+}
+
+.contact-info td {
+    padding-top: 20px;
+}
+  
+.contact-info span{
+    color: var(--mainColor);
+}
+
+.contact-info tr td i{
+    padding: 0 20px;
+}
+
+.form-control:focus {
+    border: 2px solid var(--mainColor);
+    box-shadow: none;    
+}
+   
+#contact {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#contact.contact-active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/***********Message Modal************/
+.mmodal {
+    z-index: 2000;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    color: #000;
+}
+   
+.mmodal-body {
+     padding: 20px; 
+}
+
+.mmodal-footer {
+    padding: 20px;
+}
+
+.mmodal-backdrop {
+    z-index: 1900;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.result {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 100%;
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 4px;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 07.FOOTER
+* ----------------------------------------------------------------------------------------
+*/
+.footer-area {
+  background-color: var(--secondColorLight);
+  width: 100%;
+}
+
+.contact-icons a i{
+    color: var(--mainColor);
+    font-size: 20px;
+    margin: 10px;
+}
+
+.contact-icons a:hover i{
+    color: var(--mainColorDark);
+}
+
+.contact-icons a:hover {
+    text-decoration: none; 
+}
+
+.copyright {
+    color:#fff;
+    padding-bottom: 10px;
+}
+
+#btnTop {
+    display: none;
+    position: fixed;
+    bottom: 59px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: 1px solid #ced4da;
+    color: #495057;
+    cursor: pointer;
+    background-color: #fff;
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    padding: 0;
+}
+  
+#btnTop:hover {
+    background-color: var(--mainColor);
+    color: white;
+    border: none;
+}
+
+#btnTop:active {
+    outline: none;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 08. MEDIA QUERY
+* ----------------------------------------------------------------------------------------
+*/
+
+ /**********Extra Large devices only *************/
+ @media (min-width: 1200px) {
+    /*PORTFOLIO*/
+    .project-title {
+        font-size: 40px;
+      }
+    .modal-dialog {
+        width: 60vw;
+        margin: 0 auto;
+    }
+
+    .item-card {
+        font-size: 100%;
+    }
+    
+    .item-card i {
+        font-size: 50px;
+    }
+    .technology-icons {
+        font-size: 50px;
+    }
+    
+    .technology-icons i {
+        margin: 10px;
+    }
+    
+ 
+ }
+/**********Large devices only ************/
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    /*PORTFOLIO*/
+    .project-title {
+        font-size: 40px;
+    }
+
+    .modal-dialog {
+        width: 60vw;
+        margin: 0 auto;
+    }
+
+    .item-card {
+        font-size: 100%;
+    }
+    
+    .item-card i {
+        font-size: 50px;
+    }
+
+    .technology-icons {
+        font-size: 50px;
+    }
+    
+    .technology-icons i {
+        margin: 10px;
+    }
+    
+
+}
+/**********Medium devices only *************/
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    /*PORTFOLIO*/
+    .project-title {
+        font-size: 40px;
+      }
+
+    .modal-dialog {
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    .technology-icons {
+        font-size: 50px;
+    }
+    
+    .technology-icons i {
+        margin: 10px;
+    }
+    
+}
+/**********Small devices only *************/
+@media (min-width: 576px) and (max-width: 767px) {
+    /*HEADER*/
+    .header-text {
+        left: 5%;   
+    }
+
+    .header-text .text-2 {
+        font-size: 2.5em;   
+    }
+
+     /*PORTFOLIO*/
+     
+     .project-title {
+        font-size: 20px;
+     }
+
+     .btn-project {
+        margin: 10px;
+    }
+
+    .technology-icons {
+        font-size: 50px;
+    }
+    
+    .technology-icons i {
+        margin: 10px;
+    }
+    
+    /*CONTACT*/
+    .mmodal {
+        top: 25%;
+        left: 10%;
+        width: 80%;
+        height: 50%;
+    }
+}
+
+/**********Extra Small devices only *************/
+@media (max-width: 575px) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
