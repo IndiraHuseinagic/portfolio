@@ -93,6 +93,7 @@ section:nth-of-type(3) {  /*contact section*/
 * 02.MENU AREA
 * ----------------------------------------------------------------------------------------
 */
+/*Navigation*/
 .nav-link {
     color:#fff !important;
     font-weight: 500;
@@ -127,6 +128,7 @@ section:nth-of-type(3) {  /*contact section*/
     background-color: var(--mainColor);
     padding: 0 4px;
     font-size: 20px;
+    display: none;
 }
 
 a.navbar-brand:hover {
@@ -137,6 +139,7 @@ a.navbar-brand:hover {
 * 03.HEADER
 * ----------------------------------------------------------------------------------------
 */
+/*Header Image*/
 .header-area {    
     background: url(.././img/mobile.jpeg) no-repeat;  
     background-size: cover;
@@ -158,6 +161,7 @@ a.navbar-brand:hover {
     opacity: .7;
 }
 
+/*Header Image*/
 .header-text {
     position: absolute;
     left: 10%;
@@ -166,26 +170,12 @@ a.navbar-brand:hover {
     z-index: 3;
 }
 
-.btn-header {
-    opacity: 0;
-}
-
 .header-text .text-1,
 .header-text .text-2,
 .header-text .text-3 {
      animation: content-active 2s ease;
      animation-fill-mode: forwards;
 }
-
-.header-text .btn-header {
-     animation: content-active 2s ease 1s;
-     animation-fill-mode: forwards;
-}
-
-@keyframes content-active {
-     0% {opacity: 0;}
-    100% {opacity: 1;}
-} 
 
 .header-text .text-1 {
     font-size: 1.5em; 
@@ -200,16 +190,34 @@ a.navbar-brand:hover {
     margin-bottom: 20px;
 }
 
+.header-text .btn-basic {
+    opacity: 0;
+}
+
+.header-text .btn-basic {
+     animation: content-active 2s ease 1s;
+     animation-fill-mode: forwards;
+}
+
+@keyframes content-active {
+     0% {opacity: 0;}
+    100% {opacity: 1;}
+} 
+
 .header-text .btn-basic:hover {
     color: #fff;
 }
-
 
 /*
 * ----------------------------------------------------------------------------------------
 * 04.ABOUT
 * ----------------------------------------------------------------------------------------
 */
+#about .section-title {
+    padding-top: 70px;
+}
+
+/*Info*/
 .my-info {
     text-align: justify;
     background-color: #e9ecef;
@@ -220,11 +228,16 @@ a.navbar-brand:hover {
     border-radius: 100%;
 }
 
-.skills-title {
-    margin-bottom: 15px;
+/*Skills*/
+.my-skills {
+    margin: 20px auto;
 }
 
-.skills-title:first-child  {
+.skills-title {
+    margin-bottom: 16px;
+}
+
+.skills-title:first-of-type  {
     margin-top: 20px;
 }
 
@@ -235,13 +248,9 @@ a.navbar-brand:hover {
 
 .progress-bar {
     background-color: var(--mainColor);
-    padding-bottom: 50px;
 }
 
-#about .section-title {
-    padding-top: 70px;
-}
-
+/*Animations*/
 #about {
     position: relative;
     opacity: 0;
@@ -259,7 +268,25 @@ a.navbar-brand:hover {
 * 05.PROJECT
 * ----------------------------------------------------------------------------------------
 */
+/*Project Type*/
+.item-card {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    font-size: 80%;
+}
 
+.item-card i {
+    color: var(--mainColor);
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.item-card p {
+    color: #768292;
+}
+
+/*Project Image*/
 .project-box {
     position: relative;
     width: 100%;
@@ -286,7 +313,8 @@ a.navbar-brand:hover {
     opacity: 1;
     width: 100%;
 }
-  
+
+/*Project Text*/
 .project-text {
     width: 100%;
     position: relative;
@@ -315,38 +343,7 @@ a.navbar-brand:hover {
     border: 0;
 }
 
-#portfolio {
-    position: relative;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 1s;
-}
-
-#portfolio.portfolio-active {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-    position: fixed;
-    top: 30vh;
-}
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-    position: fixed;
-    top: 30vh;   
-}
-
-.carousel-control-prev, 
-.carousel-control-next {
-    width: 5%;   
-}
-
-.carousel-inner {
-    width: 100%;
-}
-
+/*Modal for Project*/
 .modal {
     padding-right: 0!important;
 }
@@ -386,6 +383,28 @@ a.navbar-brand:hover {
     outline: none;
 }
 
+/*Carousel*/
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    position: fixed;
+    top: 25vw;
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    position: fixed;
+    top: 25vw;   
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 5%;   
+}
+
+.carousel-inner {
+    width: 100%;
+}
+
+/*Product Details*/
 .project-show .btn-basic,
 .project-show .btn-second {
     border-radius: 20px;
@@ -403,23 +422,7 @@ a.navbar-brand:hover {
     border: 1px solid #000;
 }
 
-.item-card {
-    width: 100%;
-    height: 120px;
-    margin-bottom: 20px;
-    font-size: 80%;
-}
-
-.item-card i {
-    color: var(--mainColor);
-    font-size: 40px;
-    font-weight: 100;
-}
-
-.item-card p {
-    color: #768292;
-}
-
+/*Technologies*/
 .technology-icons {
     color: var(--secondColor);
     font-size: 35px;
@@ -436,11 +439,25 @@ a.navbar-brand:hover {
     font-weight: bold;
 }
 
+/*Animations*/
+#portfolio {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#portfolio.portfolio-active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 /*
 * ----------------------------------------------------------------------------------------
 * 06.CONTACT
 * ----------------------------------------------------------------------------------------
 */
+
 #contact {
     color: #fff;
 }
@@ -449,22 +466,7 @@ a.navbar-brand:hover {
     padding-top: 70px;
 }
 
-#contact-form {
-    width:100%;
-    margin:20px auto;
-}
-
-.form-control {
-    background-color:  var(--secondColorLight);
-    border:0; 
-    border-radius: 0;
-    margin-bottom: 10px;
-}
-
-#contact-form .btn-basic {
-    margin-top: 10px;
-}
-
+/*Contact Info*/
 .contact-info {
     margin: 20px auto;
 }
@@ -481,24 +483,29 @@ a.navbar-brand:hover {
     padding: 0 20px;
 }
 
+/*Contact Form*/
+#contact-form {
+    width:100%;
+    margin:20px auto;
+}
+
+.form-control {
+    background-color:  var(--secondColorLight);
+    border:0; 
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+#contact-form .btn-basic {
+    margin-top: 10px;
+}
+
 .form-control:focus {
     border: 2px solid var(--mainColor);
     box-shadow: none;    
 }
-   
-#contact {
-    position: relative;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 1s;
-}
 
-#contact.contact-active {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-/***********Message Modal************/
+/*Modal for Success and Error messages*/
 .mmodal {
     z-index: 2000;
     position: fixed;
@@ -530,7 +537,7 @@ a.navbar-brand:hover {
     opacity: 0.5;
 }
 
-.result {
+.result-icon {
     width: 40px;
     height: 40px;
     font-size: 20px;
@@ -538,6 +545,19 @@ a.navbar-brand:hover {
     background-color: var(--mainColor);
     color: #fff;
     padding: 4px;
+}
+
+/*Animations*/   
+#contact {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+#contact.contact-active {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 /*
@@ -550,6 +570,7 @@ a.navbar-brand:hover {
   width: 100%;
 }
 
+/*Social Media*/
 .contact-icons a i{
     color: var(--mainColor);
     font-size: 20px;
@@ -564,11 +585,13 @@ a.navbar-brand:hover {
     text-decoration: none; 
 }
 
+/*Copyright*/
 .copyright {
     color:#fff;
     padding-bottom: 10px;
 }
 
+/*Back to Top Button*/
 #btnTop {
     display: none;
     position: fixed;
@@ -607,7 +630,8 @@ a.navbar-brand:hover {
     /*PORTFOLIO*/
     .project-title {
         font-size: 40px;
-      }
+    }
+
     .modal-dialog {
         width: 60vw;
         margin: 0 auto;
@@ -628,6 +652,12 @@ a.navbar-brand:hover {
         margin: 10px;
     }
     
+    .carousel-control-prev-icon {
+        top: 17vw;
+    }
+    .carousel-control-next-icon {
+        top: 17vw;   
+    }
  
  }
 /**********Large devices only ************/
@@ -659,6 +689,12 @@ a.navbar-brand:hover {
         margin: 10px;
     }
     
+    .carousel-control-prev-icon {
+        top: 17vw;
+    }
+    .carousel-control-next-icon {
+        top: 17vw;   
+    }
 
 }
 /**********Medium devices only *************/
@@ -667,7 +703,7 @@ a.navbar-brand:hover {
     /*PORTFOLIO*/
     .project-title {
         font-size: 40px;
-      }
+    }
 
     .modal-dialog {
         width: 70vw;
@@ -680,6 +716,13 @@ a.navbar-brand:hover {
     
     .technology-icons i {
         margin: 10px;
+    }
+
+    .carousel-control-prev-icon {
+        top: 21vw;
+    }
+    .carousel-control-next-icon {
+        top: 21vw;   
     }
     
 }
@@ -696,11 +739,11 @@ a.navbar-brand:hover {
 
      /*PORTFOLIO*/
      
-     .project-title {
+    .project-title {
         font-size: 20px;
-     }
+    }
 
-     .btn-project {
+    .btn-project {
         margin: 10px;
     }
 
@@ -722,8 +765,7 @@ a.navbar-brand:hover {
 }
 
 /**********Extra Small devices only *************/
-@media (max-width: 575px) {
-}
+@media (max-width: 575px) {}
 
 
 
