@@ -10,8 +10,6 @@ const header = document.querySelector("#main-nav"),
 var  aboutYPos = about.getBoundingClientRect().y-500,
      portfolioYPos = portfolio.getBoundingClientRect().y-500;
      contactYPos = contact.getBoundingClientRect().y-500;
-     footerYPos = footer.getBoundingClientRect().y-500;
-
 
 //**********************SCROLL*************************
 document.addEventListener('scroll', () => {
@@ -23,7 +21,6 @@ document.addEventListener('scroll', () => {
   btnUp.style.display = "none";
   logo.style.display = "none";
 
-
   if (scroll_position > 10) {
 
     //style after first scroll
@@ -33,13 +30,13 @@ document.addEventListener('scroll', () => {
   }
 
   //animation take effect when we scroll to that section
-  if (scroll_position >= aboutYPos && scroll_position < portfolioYPos) {
+  if (scroll_position >= aboutYPos) {
     about.classList.add("about-active")    
   }
-    if (scroll_position >= portfolioYPos && scroll_position < contactYPos) {
+    if (scroll_position >= portfolioYPos) {
     portfolio.classList.add("portfolio-active")
   }
-    if (scroll_position >= contactYPos && scroll_position < footerYPos) {
+    if (scroll_position >= contactYPos) {
     contact.classList.add("contact-active")
   }
 });
@@ -93,7 +90,7 @@ window.onload = function() {
    });
 
 
-//**********************CLICK*************************
+//*****************Navbar CLICK************************
 //hide navbar after click
 $(document).click(function () {
   $('.navbar-collapse').collapse('hide');
