@@ -483,10 +483,15 @@ a.navbar-brand:hover {
     padding: 0 20px;
 }
 
+.phone, .phone:hover {
+    color: #fff;
+}
+
 /*Contact Form*/
 #contact-form {
     width:100%;
     margin:20px auto;
+    padding-left: 20px;
 }
 
 .form-control {
@@ -509,15 +514,15 @@ a.navbar-brand:hover {
 .mmodal {
     z-index: 2000;
     position: fixed;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
+    left: 10%;
+    width: 80%;
+    bottom: 10%;
+    height: 30%;
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: #fff;
     color: #000;
 }
-   
+  
 .mmodal-body {
      padding: 20px; 
 }
@@ -658,6 +663,14 @@ a.navbar-brand:hover {
     .carousel-control-next-icon {
         top: 17vw;   
     }
+
+    /*CONTACT*/
+    .mmodal {
+        left: 25%;
+        width: 50%;
+        bottom: 30%;
+        height: 40%;
+    }
  
  }
 /**********Large devices only ************/
@@ -696,6 +709,14 @@ a.navbar-brand:hover {
         top: 17vw;   
     }
 
+    /*CONTACT*/
+    .mmodal {
+       left: 25%;
+       width: 50%;
+       bottom: 30%;
+       height: 40%;
+    }
+
 }
 /**********Medium devices only *************/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -723,6 +744,14 @@ a.navbar-brand:hover {
     }
     .carousel-control-next-icon {
         top: 21vw;   
+    }
+
+    /*CONTACT*/
+    .mmodal {
+       left: 25%;
+       width: 50%;
+       bottom: 30%;
+       height: 40%;
     }
     
 }
@@ -754,14 +783,7 @@ a.navbar-brand:hover {
     .technology-icons i {
         margin: 10px;
     }
-    
-    /*CONTACT*/
-    .mmodal {
-        top: 25%;
-        left: 10%;
-        width: 80%;
-        height: 50%;
-    }
+
 }
 
 /**********Extra Small devices only *************/
