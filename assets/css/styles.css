@@ -18,7 +18,6 @@ Author       : Indira Huseinagic
 * ----------------------------------------------------------------------------------------
 */
 
-
 /*
 * ----------------------------------------------------------------------------------------
 * 01.GENERAL
@@ -93,6 +92,24 @@ section:nth-of-type(3) {  /*contact section*/
 * 02.MENU AREA
 * ----------------------------------------------------------------------------------------
 */
+.language {
+    width: 60px;
+    margin: 8px 20px 8px 0;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    border-radius: 2px; 
+    outline: none;  
+}
+.language:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.language option {
+    color: #000;
+}
+
 /*Navigation*/
 .nav-link {
     color:#fff !important;
@@ -101,7 +118,7 @@ section:nth-of-type(3) {  /*contact section*/
 
 .nav-link.active {
     color: var(--mainColor) !important;
-    font-weight: 700;
+    font-weight: 700;    
 }
 
 .navbar-toggler i {
@@ -262,7 +279,7 @@ a.navbar-brand:hover {
     opacity: 1;
     transform: translateY(0px);
 }
-  
+
 /*
 * ----------------------------------------------------------------------------------------
 * 05.PROJECT
@@ -452,6 +469,7 @@ a.navbar-brand:hover {
     transform: translateY(0px);
 }
 
+
 /*
 * ----------------------------------------------------------------------------------------
 * 06.CONTACT
@@ -565,6 +583,7 @@ a.navbar-brand:hover {
     transform: translateY(0px);
 }
 
+
 /*
 * ----------------------------------------------------------------------------------------
 * 07.FOOTER
@@ -620,7 +639,7 @@ a.navbar-brand:hover {
     border: none;
 }
 
-#btnTop:active {
+#btnTop:active  {
     outline: none;
 }
 

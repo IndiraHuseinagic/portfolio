@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indira Huseinagic</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,300;1,400&display=swap"
-        rel="stylesheet">
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,300;1,400&display=swap"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
@@ -22,33 +22,48 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="10">
 
+
     <!--Header-->
     <header id="home" class="header-area">
 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-md fixed-top app-container" id="main-nav">
             <a class="navbar-brand" href="#home">IH</a>
-            <button class="navbar-toggler ml-auto px-0 py-2" type="button" data-toggle="collapse"
+            <select class="language ml-auto my-auto" id="lang">
+                <option value="EN">EN&emsp;</option>
+                <option value="DE" selected>DE&emsp;</option>
+            </select>
+            <button class="navbar-toggler mr-0 px-0 py-2" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item ml-auto"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item ml-auto"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item ml-auto"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item ml-auto"><a class="nav-link pr-0" href="#contact">Contact</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link en" href="#home">Home</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link en" href="#about">About</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link en" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link pr-0 en" href="#contact">Contact</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link de" href="#home">Home</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link de" href="#about">Über mich</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link de" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item ml-auto"><a class="nav-link pr-0 de" href="#contact">Kontakt</a></li>
                 </ul>
             </div>
         </nav>
 
         <!--Text-->
         <div class="header-text app-container">
-            <div class="text-1">Hello, I'am</div>
-            <div class="text-2">Indira Huseinagic </div>
-            <div class="text-3">I'm a front-end web developer.</div>
-            <a class="btn btn-basic" href="assets/img/pom.txt" download>Lebenslauf
+            <div class="text-1 en">Hello, I'am</div>
+            <div class="text-2 en">Indira Huseinagic </div>
+            <div class="text-3 en">I'm a front-end web developer.</div>
+            <a class="btn btn-basic en" href="assets/img/Lebenslauf_Indira_Huseinagic.pdf" download>Download CV
+                <i class="fas fa-arrow-down"></i>
+            </a>
+            <div class="text-1 de">Hallo, mein Name ist</div>
+            <div class="text-2 de">Indira Huseinagic </div>
+            <div class="text-3 de">Ich bin front-end web entwickler.</div>
+            <a class="btn btn-basic de" href="assets/img/pom.txt" download>Lebenslauf
                 <i class="fas fa-arrow-down"></i>
             </a>
         </div>
@@ -57,25 +72,45 @@
     <!--About-->
     <section id="about">
         <div class="app-container">
-            <div class="section-title text-center">About</div>
+            <div class="section-title text-center en">About</div>
+            <div class="section-title text-center de">Über mich</div>
             <div class="row about-me">
+
                 <!--Info-->
                 <div class="col-md-6 my-info">
                     <img class="d-flex mx-auto mb-2" src="assets/img/slika.jpg" alt="My Photo">
-                    <p> My name is Indira, I am an electrical engineer, living in Munich, Germany. 
-                        In the last 12 months I have been strongly interested in web development and I have started 
-                        learning HTML, CSS, Bootstrap, JavaScript and Angular. I gained a good understanding of these 
-                        technologies and I managed to create one real-world project, an e-commerce app for shoes shown below. 
-                        I enjoj building applications with intuitive, dynamic user experiences and I have a huge motivation to 
+                    <p class="en"> My name is Indira, I am an electrical engineer, living in Munich, Germany.
+                        In the last 12 months I have been strongly interested in web development and I have started
+                        learning HTML, CSS, Bootstrap, JavaScript and Angular. I gained a good understanding of these
+                        technologies and I managed to create one real-world project, an e-commerce app for shoes shown
+                        below.
+                        I enjoj building applications with intuitive, dynamic user experiences and I have a huge
+                        motivation to
                         learn further and become a full-stack developer.
-                        Currently I am looking for a front-end developer position with the opportunity to continue to learn and progress.
+                        Currently I am looking for a front-end developer position with the opportunity to continue to
+                        learn and progress.
                     </p>
-                    <a class="btn btn-basic" href="assets/img/pom.txt" download>Read More</a>
+                    <p class="de"> Mein Name ist Indira, ich bin Elektroingenieurin und wohne in München, Deutschland.
+                        In den letzten 12 Monaten habe ich mich stark für die Webentwicklung interessiert und habe
+                        angefangen
+                        HTML, CSS, Bootstrap, JavaScript und Angular zu lernen. Ich habe ein gutes Verständnis für diese
+                        Technologien und
+                        ich habe es geschafft, ein reales Projekt zu erstellen, eine E-Commerce-App für Schuhe, die
+                        unten gezeigt wird.
+                        Ich genieße es, Apps mit intuitiven, dynamischen Benutzererfahrungen zu erstellen, und ich habe
+                        eine große Motivation,
+                        weiter zu lernen um ein Full-Stack-Entwickler zu werden.
+                        Derzeit suche ich nach einer Front-End-Entwicklerposition mit der Möglichkeit, weiter zu lernen
+                        und mich weiterzuentwickeln.
+                    </p>
+                    <a class="btn btn-basic en" href="assets/img/Lebenslauf_Indira_Huseinagic.pdf" download>Read More</a>
+                    <a class="btn btn-basic de" href="assets/img/Lebenslauf_Indira_Huseinagic.pdf" download>Mehr...</a>
                 </div>
 
                 <!--Skills-->
                 <div class="col-md-6 my-skills mb-0">
-                    <h4>Technical Skills</h4>
+                    <h4 class="en">Technical Skills</h4>
+                    <h4 class="de">Skillset</h4>
                     <div class="skills-title">HTML
                         <div class="progress">
                             <div class="progress-bar" style="width: 90%;"></div>
@@ -106,7 +141,8 @@
                             <div class="progress-bar" style="width: 75%;"></div>
                         </div>
                     </div>
-                    <p class="mb-0">Other: C++, Matlab</p>
+                    <p class="mb-0 en">Other: C++, Matlab</p>
+                    <p class="mb-0 de">Sonstiges: C++, Matlab</p>
                 </div>
             </div>
         </div>
@@ -115,7 +151,8 @@
     <!--Portfolio-->
     <section id="portfolio">
         <div class="app-container">
-            <div class="section-title text-center">My Project</div>
+            <div class="section-title text-center en">My Project</div>
+            <div class="section-title text-center de">Mein Projekt</div>
 
             <!--Project Type-->
             <div class="row no-gutters text-center">
@@ -124,8 +161,10 @@
                     <div class="item-card mx-auto d-flex">
                         <div class="my-auto mx-auto">
                             <i class="far fa-phone-laptop"></i>
-                            <div class="font-weight-bold mt-2">Responsive</div>
-                            <p>Works on any device.</p>
+                            <div class="font-weight-bold mt-2 en">Responsive</div>
+                            <p class="en">Works on any device.</p>
+                            <div class="font-weight-bold mt-2 de">Responsiv</div>
+                            <p class="de">Funktioniert auf jedem Gerät.</p>
                         </div>
                     </div>
                 </div>
@@ -134,8 +173,10 @@
                     <div class="item-card mx-auto d-flex">
                         <div class="my-auto mx-auto">
                             <i class="far fa-rocket"></i>
-                            <div class="font-weight-bold mt-2">Dynamic</div>
-                            <p> High user interactivity.</p>
+                            <div class="font-weight-bold mt-2 en">Dynamic</div>
+                            <p class="en"> High user interactivity.</p>
+                            <div class="font-weight-bold mt-2">Dynamisch</div>
+                            <p>Hohe Benutzerinteraktivität.</p>
                         </div>
                     </div>
                 </div>
@@ -145,7 +186,8 @@
                         <div class="my-auto mx-auto">
                             <i class="far fa-users"></i>
                             <div class="font-weight-bold mt-2">User Friendly</div>
-                            <p>Intuitive and easy to use.</p>
+                            <p class="en">Intuitive and easy to use.</p>
+                            <p class="de">Intuitiv und einfach zu verwenden.</p>
                         </div>
                     </div>
                 </div>
@@ -154,14 +196,17 @@
                     <div class="item-card mx-auto d-flex">
                         <div class="my-auto mx-auto">
                             <i class="far fa-database"></i>
-                            <div class="font-weight-bold mt-2">Real-time Experience</div>
-                            <p>RT Firebase Database.</p>
+                            <div class="font-weight-bold mt-2 en">Real-time Experience</div>
+                            <p class="en">RT Firebase Database.</p>
+                            <div class="font-weight-bold mt-2 de">Echtzeit Erfahrung</div>
+                            <p class="de">Firebase Datenbank.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 col-md-10 col-lg-7 p-0 project-box">
+
                 <!--Project Image-->
                 <img class="d-block w-100 img-responsive" src="assets/img/project_photo.png" alt="Project Image">
 
@@ -170,14 +215,23 @@
                     <div class="project-text my-auto">
                         <h4 class="project-title">Xshoes - Online Shop</h4>
                         <button class="btn btn-project" data-toggle="modal" data-target="#projectDetails">
-                            See More...
+                            <span class="en">See More...</span>
+                            <span class="de">Mehr...</span>
                         </button>
                     </div>
                 </div>
             </div>
 
+            <!--Demo/Code-->
+            <div class="project-show text-center m-3">
+                <a href="https://xshoes-8f2c4.web.app" target="_blank" class="btn btn-basic mx-3">Demo</a>
+                <a href="https://github.com/IndiraHuseinagic/project.git" target="_blank"
+                    class="btn btn-second mx-3">Code</a>
+            </div>
+
             <!--Technologies-->
-            <div class="text-center project-tech"> Technologies and tools that I use:</div>
+            <div class="text-center project-tech en"> Technologies and tools that I use:</div>
+            <div class="text-center project-tech de"> Technologien und Tools, die ich verwende:</div>
             <div class="technology-icons mt-2">
                 <i class="fab fa-html5" data-toggle="tooltip" data-placement="bottom" title="HTML"></i>
                 <i class="fab fa-css3-alt" data-toggle="tooltip" data-placement="bottom" title="CSS"></i>
@@ -188,7 +242,7 @@
                 <i class="fab fa-angular" data-toggle="tooltip" data-placement="bottom" title="Angular"></i>
                 <i class="fas fa-database" data-toggle="tooltip" data-placement="bottom" title="Firebase"></i>
             </div>
-        </div>  
+        </div>
     </section>
 
     <!-- Modal for Project-->
@@ -200,7 +254,7 @@
                     <span aria-hidden="true">&#10005;</span>
                 </button>
                 <div id="carouselIndicators" class="carousel" data-ride="carousel" data-interval="false">
-                    
+
                     <!--Product Details-->
                     <div class="carousel-inner m-0">
                         <!--Home-->
@@ -209,17 +263,29 @@
                             <hr>
                             <div class="description">
                                 <h4>Xshoes Web App</h4>
-                                <p class="project-description">Xshoes is a web application designed for online shopping.
-                                    It is dynamic web app where user can interact and perform operations such as search, login, place order,
+                                <p class="project-description en">Xshoes is a web application designed for online
+                                    shopping.
+                                    It is dynamic web app where user can interact and perform operations such as search,
+                                    login, place order,
                                     make favorite list, make shopping cart list, filter, sort, and so on. Website is
                                     responsive providing an optimal viewing experience across a wide range of devices.
                                     App uses Firebase as backend service for hosting, cloud storage, real-time database,
                                     user authentication and website deployment. </p>
                                 <p>
-                                    <strong>&#10003; Client-Side: </strong> HTML 5, CSS 3, Bootstrap 4, TypeScript 4.1.2
-                                    <br>
-                                    <strong>&#10003; Framework: </strong> Angular 11.2.2<br>
-                                    <strong>&#10003; Back-end Side: </strong> Firebase 9.3.0
+                                <p class="project-description de">
+                                    Xshoes ist eine Web app für Online-Shopping.
+                                    Es handelt sich um eine dynamische Web-App, in der der Benutzer interagieren und
+                                    Vorgänge ausführen kann, wie z. B.: Suche, Anmeldung, Bestellung aufgeben,
+                                    Wunschliste erstellen, Warenkorbliste erstellen, filtern, sortieren und so weiter.
+                                    Webseite ist
+                                    responsive und bietet ein optimales Seherlebnis auf einer Vielzahl von Geräten.
+                                    App verwendet Firebase als Backend für Hosting, Cloud-Speicher, Echtzeit-Datenbank,
+                                    Benutzerauthentifizierung und Website-Bereitstellung.
+                                </p>
+                                <strong>&#10003; Front-end: </strong> HTML 5, CSS 3, Bootstrap 4, TypeScript 4.1.2
+                                <br>
+                                <strong>&#10003; Framework: </strong> Angular 11.2.2<br>
+                                <strong>&#10003; Back-end: </strong> Firebase 9.3.0
                                 </p>
                             </div>
 
@@ -228,28 +294,40 @@
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/product-filter.png" alt="Filter Products">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Filter Products</h4>
                                 <p><strong> Filter: </strong> size, brand, color and price <br>
                                     <strong> Delete: </strong> all filters or just one selected filter
                                 </p>
                             </div>
+                            <div class="description de">
+                                <h4>Produkte filtern</h4>
+                                <p><strong> Filter: </strong>Größe, Marke, Farbe und Preis<br>
+                                    <strong> Löschen: </strong>alle Filter oder nur ein ausgewählter Filter
+                                </p>
+                            </div>
+
                         </div>
                         <!--Product-Sort-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/product-sort.png" alt="Sort Products">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Sort Products</h4>
                                 <p><strong>Sort by: </strong>title A-to-Z or Z-to-A,
                                     price low-to-high or high-to-low</p>
+                            </div>
+                            <div class="description de">
+                                <h4>Produkte sortieren</h4>
+                                <p><strong>Sortiere nach: </strong>
+                                    Titel A bis Z oder Z bis A, Preis niedrig-hoch oder hoch-niedrig</p>
                             </div>
                         </div>
                         <!--Product-Details-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/product-details.png" alt="Product Details">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Product Details</h4>
                                 <p> <strong>Details: </strong>product image, product title, product price <br>
                                     <strong>Open: </strong>open product image in new modal window <br>
@@ -258,12 +336,21 @@
                                     <strong>Add:</strong> product to shopping card
                                 </p>
                             </div>
+                            <div class="description de">
+                                <h4>Produktdetails</h4>
+                                <p> <strong>Details: </strong>Produktbild, Produkttitel, Produktpreis <br>
+                                    <strong>Öffnen: </strong>Produktbild in neuem Fenster öffnen <br>
+                                    <strong>Auswählen: </strong>Produktgröße kann ausgewählt werden <br>
+                                    <strong>Hinzufügen/Entfernen: </strong>Produkt zu/von Wunschliste <br>
+                                    <strong>Hinzufügen: </strong>Produkt zum Warenkorb
+                                </p>
+                            </div>
                         </div>
                         <!--Shopping Cart-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/shopping-cart.png" alt="Shopping Cart">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Shopping Cart</h4>
                                 <p> <strong>Details: </strong> product image, product title, selected size, color and
                                     brand <br>
@@ -271,42 +358,68 @@
                                     <strong>Clear: </strong> delete all products from cart
                                 </p>
                             </div>
+                            <div class="description de">
+                                <h4>Warenkorb</h4>
+                                <p> <strong>Details: </strong>Produktbild, Produkttitel, ausgewählte Größe, Farbe und
+                                    Marke <br>
+                                    <strong>Menge: </strong>Produktmenge erhöhen/verringern <br>
+                                    <strong>Alles Löschen: </strong>Alle Produkte aus dem Warenkorb löschen
+                                </p>
+                            </div>
                         </div>
                         <!--Login-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/login.png" alt="Login">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>User Login</h4>
                                 <p><strong>Login: </strong>login procedure using Google </p>
+                            </div>
+                            <div class="description de">
+                                <h4>Anmeldung</h4>
+                                <p><strong>Anmeldung: </strong>mit Google anmelden</p>
                             </div>
                         </div>
                         <!--Shipping-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/shipping.png" alt="Shipping">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Shipping Data</h4>
                                 <p><strong>Enter Data: </strong>shipping data for logged user</p>
+                            </div>
+                            <div class="description de">
+                                <h4>Lieferadresse</h4>
+                                <p><strong>Daten eingeben: </strong>Lieferadresse für angemeldete Benutzer</p>
                             </div>
                         </div>
                         <!--Payment-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/payment.png" alt="Payment">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Payment Type</h4>
                                 <p><strong>Select: </strong>payment type for given order</p>
+                            </div>
+                            <div class="description de">
+                                <h4>Zahlungsmethode</h4>
+                                <p><strong>Auswählen: </strong>Zahlungsmethode für gegebene Bestellung</p>
                             </div>
                         </div>
                         <!--Order Summary-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/check-out-summary.png" alt="Summary">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Order summary</h4>
                                 <p> <strong>Details: </strong>product, shipping and payment <br>
                                     <strong>Order: </strong>place order
+                                </p>
+                            </div>
+                            <div class="description de">
+                                <h4>Übersicht</h4>
+                                <p> <strong>Details: </strong>Produkt, Versand und Zahlung<br>
+                                    <strong>Bestellung: </strong>bestellen
                                 </p>
                             </div>
                         </div>
@@ -314,19 +427,30 @@
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/my-orders.png" alt="My Orders">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>My Orders</h4>
                                 <p><strong>Details: </strong>logged user order list </p>
+                            </div>
+                            <div class="description de">
+                                <h4>Meine Bestellungen</h4>
+                                <p><strong>Details: </strong>Bestellliste der angemeldeten Benutzer</p>
                             </div>
                         </div>
                         <!--Admin User -->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/admin-user.png" alt="Admin User">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Admin</h4>
                                 <p><strong>All Orders: </strong> only admin can see all orders from all users <br>
                                     <strong>Manage Products: </strong> only admin can edit products
+                                </p>
+                            </div>
+                            <div class="description de">
+                                <h4>Administrator</h4>
+                                <p><strong>Alle Bestellungen: </strong>Nur der Administrator kann alle Bestellungen von
+                                    allen Benutzern sehen <br>
+                                    <strong>Produkte verwalten: </strong>Nur der Administrator kann Produkte verwalten
                                 </p>
                             </div>
                         </div>
@@ -334,20 +458,33 @@
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/admin-orders.png" alt="Admin Orders">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Admin Orders</h4>
                                 <p><strong>Details: </strong>only admin can see list of all orders from all users </p>
+                            </div>
+                            <div class="description de">
+                                <h4>Admin-Bestellungen</h4>
+                                <p><strong>Details: </strong>Nur der Administrator kann die Liste aller Bestellungen von
+                                    allen Benutzern sehen </p>
                             </div>
                         </div>
                         <!--Manage Products-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/manage-products.png" alt="Manage Products">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Manage products</h4>
                                 <p><strong>New: </strong>admin can add new product to database <br>
                                     <strong>Search: </strong>admin can search product list <br>
                                     <strong>Edit: </strong>admin can edit product properties <br>
+                                </p>
+                            </div>
+                            <div class="description de">
+                                <h4>Produkte verwalten</h4>
+                                <p><strong>Neu: </strong>Administrator kann der Datenbank ein neues Produkt hinzufügen
+                                    <br>
+                                    <strong>Suche: </strong>Administrator kann Produktliste durchsuchen <br>
+                                    <strong>Bearbeiten: </strong>Administrator kann Produkteigenschaften bearbeiten <br>
                                 </p>
                             </div>
                         </div>
@@ -356,10 +493,17 @@
                             <img class="d-block w-100" src="assets/img/manage-products-edit.png"
                                 alt="Manage Products Edit">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Edit products</h4>
                                 <p> <strong>Edit: </strong>admin can edit/add product <br>
                                     <strong>Delete: </strong>admin can delete product from database.
+                                </p>
+                            </div>
+                            <div class="description de">
+                                <h4>Produkte bearbeiten</h4>
+                                <p> <strong>Bearbeiten: </strong>Administrator kann Produkt bearbeiten/hinzufügen <br>
+                                    <strong>Löschen: </strong>Der Administrator kann das Produkt aus der Datenbank
+                                    löschen.
                                 </p>
                             </div>
                         </div>
@@ -367,27 +511,39 @@
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/search.png" alt="Search">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Search products</h4>
                                 <p> <strong>Search: </strong>search products by title</p>
+                            </div>
+                            <div class="description de">
+                                <h4>Produkte suchen</h4>
+                                <p> <strong>Suche: </strong>Suche nach Produkten nach Titel</p>
                             </div>
                         </div>
                         <!--Favorites-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/favorites.png" alt="Favorites">
                             <hr>
-                            <div class="description">
+                            <div class="description en">
                                 <h4>Favorite Products</h4>
                                 <p> <strong>Favorites: </strong>all favorite products are listed.</p>
+                            </div>
+                            <div class="description de">
+                                <h4>Favoriten-Produkte</h4>
+                                <p> <strong>Favoriten: </strong>Alle Favoriten-Produkte werden aufgelistet</p>
                             </div>
                         </div>
                         <!--Brands-->
                         <div class="carousel-item">
                             <img class="d-block w-100" src="assets/img/brands.png" alt="Brands">
                             <hr>
-                            <div class="description">
-                                <h4>Sale products</h4>
+                            <div class="description en">
+                                <h4>Brands</h4>
                                 <p> <strong>Brands: </strong>all brands are listed.</p>
+                            </div>
+                            <div class="description de">
+                                <h4>Marken</h4>
+                                <p> <strong>Marken: </strong>Alle Marken werden aufgelistet</p>
                             </div>
                         </div>
                     </div>
@@ -404,33 +560,42 @@
                 <!--Demo/Code-->
                 <div class="project-show text-center m-3">
                     <a href="https://xshoes-8f2c4.web.app" target="_blank" class="btn btn-basic mx-3">Demo</a>
-                    <a href="https://github.com/IndiraHuseinagic/project.git" target="_blank" class="btn btn-second mx-3">Code</a>
+                    <a href="https://github.com/IndiraHuseinagic/project.git" target="_blank"
+                        class="btn btn-second mx-3">Code</a>
                 </div>
             </div>
         </div>
-    </div>     
+    </div>
 
     <!--Contact-->
     <section id="contact">
         <div class="app-container">
-            <div class="section-title text-center">Contact Me</div>
-            <h4 class="text-center">Have a question or want to work together?</h4>
+            <div class="section-title text-center en">Contact Me</div>
+            <div class="section-title text-center de">Kontakt</div>
+            <h4 class="text-center en">Have a question or want to work together?</h4>
+            <h4 class="text-center de">Sie haben eine Frage oder möchten zusammenarbeiten?</h4>
 
             <div class="row">
+
                 <!--Contact Info-->
                 <div class="col-md-5 contact-info">
-                    <h5>Contact Info</h5>
+                    <h5 class="en">Contact Info</h5>
+                    <h5 class="de">Kontaktinformation</h5>
                     <table>
                         <tr>
                             <td><i class="fas fa-map-marker-alt"></i></td>
-                            <td> <span>Address</span><br>Admiralbogen 53,<br>80939 München</td>
+                            <td class="en"> <span>Address</span><br>Admiralbogen 53,<br>80939 Munich</td>
+                            <td class="de"> <span>Adresse</span><br>Admiralbogen 53,<br>80939 München</td>
                         </tr>
                         <tr>
                             <td>
-                              <a class="phone" href="tel:+49 17670628677"> 
-                                <i class="fas fa-phone-alt"></i>
-                              </a></td>
-                            <td><span>Phone</span><br>+49 176 706 28677</td>
+                                <a class="phone" href="tel:+49 17670628677">
+                                    <i class="fas fa-phone-alt"></i>
+                                </a>
+                            </td>
+                            <td><span class="en">Phone</span>
+                                <span class="de">Telefon</span><br>+49 176 706 28677
+                            </td>
                         </tr>
                         <tr>
                             <td> <i class="fal fa-envelope"></i></td>
@@ -438,14 +603,18 @@
                         </tr>
                     </table>
                 </div>
+
                 <!--Contact Form-->
                 <div class="col-md-7">
                     <form id="contact-form" class="clearfix">
                         <input type="text" class="form-control" placeholder="Name" name="user_name" required>
-                        <input type="email" class="form-control" placeholder="Enter email" name="user_email" required>
-                        <textarea class="form-control" rows="5" placeholder="Your Message" name="message"
+                        <input type="email" class="form-control" placeholder="Email" name="user_email" required>
+                        <textarea class="form-control en" rows="5" placeholder="Your Message" name="message"
                             required></textarea>
-                        <input type="submit" class="btn btn-basic float-left" value="SEND MESSAGE">
+                        <textarea class="form-control de" rows="5" placeholder="Nachricht" name="message"
+                            required></textarea>
+                        <input type="submit" class="btn btn-basic float-left en" value="SEND MESSAGE">
+                        <input type="submit" class="btn btn-basic float-left de" value="NACHRICHT SENDEN">
                     </form>
                 </div>
             </div>
@@ -453,10 +622,15 @@
             <!-- Success Modal -->
             <div class="successModal d-none">
                 <div class="mmodal text-center">
-                    <div class="mmodal-body">
+                    <div class="mmodal-body en">
                         <div class="result-icon mx-auto">&#10003;</div>
                         <div class="font-weight-bold pt-3">Thank You!</div>
                         Your message has been sent successfully.
+                    </div>
+                    <div class="mmodal-body de">
+                        <div class="result-icon mx-auto">&#10003;</div>
+                        <div class="font-weight-bold pt-3">Vielen Dank!</div>
+                        Ihre Nachricht wurde erfolgreich gesendet.
                     </div>
                     <div class="mmodal-footer">
                         <button type="button" class="btn btn-basic close-success">Ok</button>
@@ -468,10 +642,15 @@
             <!-- Error Modal -->
             <div class="errorModal d-none">
                 <div class="mmodal text-center">
-                    <div class="mmodal-body">
+                    <div class="mmodal-body en">
                         <div class="result-icon mx-auto">&#33;</div>
                         <div class="font-weight-bold pt-3">Sorry!</div>
                         Something went wrong. <br> Failed to send your message.
+                    </div>
+                    <div class="mmodal-body de">
+                        <div class="result-icon mx-auto">&#33;</div>
+                        <div class="font-weight-bold pt-3">Error!</div>
+                        Etwas ist schief gelaufen. <br> Ihre Nachricht konnte nicht gesendet werden.
                     </div>
                     <div class="mmodal-footer">
                         <button type="button" class="btn btn-basic close-error">Ok</button>
@@ -493,7 +672,7 @@
                 <a href="https://www.facebook.com/autoserviseh" target="_blank"><i class="fab fa-facebook"></i> </a>
                 <a href="https://github.com/IndiraHuseinagic" target="_blank"><i class="fab fa-github"></i> </a>
                 <a href="https://de.linkedin.com/in/indira-rustempasic-huseinagic-61788082" target="_blank"><i
-                   class="fab fa-linkedin-in"></i> </a>
+                        class="fab fa-linkedin-in"></i> </a>
             </div>
             <!--Copyright-->
             <div class="copyright">Indira Huseinagic &copy; 2021</div>
@@ -502,16 +681,17 @@
 
 
 
+
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

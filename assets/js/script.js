@@ -1,21 +1,19 @@
-
 const header = document.querySelector("#main-nav"),
   about = document.querySelector("#about"),
   portfolio = document.querySelector("#portfolio"),
   contact = document.querySelector("#contact"),
-  footer = document.querySelector(".footer-area"),
   btnUp = document.querySelector("#btnTop"),
   logo = document.querySelector(".navbar-brand");
 
-var  aboutYPos = about.getBoundingClientRect().y-500,
-     portfolioYPos = portfolio.getBoundingClientRect().y-500;
-     contactYPos = contact.getBoundingClientRect().y-500;
-
+var  aboutYPos = about.getBoundingClientRect().y-400,
+     portfolioYPos = portfolio.getBoundingClientRect().y-1000;
+     contactYPos = contact.getBoundingClientRect().y-700;
+   
 //**********************SCROLL*************************
 document.addEventListener('scroll', () => {
 
   var scroll_position = window.scrollY;
-
+ 
   //Initial style
   header.style.backgroundColor = 'transparent';
   btnUp.style.display = "none";
@@ -58,35 +56,29 @@ window.onload = function() {
       emailjs.sendForm('contact_service', 'contact_form', this)
           .then(
                function() {
-                $('.successModal').removeClass('d-none');
-                $('.successModal').addClass('d-block');
+                $('.successModal').show();
                 $('#contact-form').find('input[type=text], input[type=email], textarea').val('');
             }, function() {
               error.style.display = "block";
-              $('.errorModal').removeClass('d-none');
-              $('.errorModal').addClass('d-block');
+              $('.errorModal').show();
             });   
   });
 }
 
   // Button to close modal for message sent
   $('.close-success').click(function () {
-      $('.successModal').removeClass('d-block');
-      $('.successModal').addClass('d-none');
+      $('.successModal').hide();
   });
 
   // Button to close modal for message not sent 
   $('.close-error').click(function () {
-      $('.errorModal').removeClass('d-block');
-      $('.errorModal').addClass('d-none');
+      $('.errorModal').hide();
   });
 
   // Modal closes when backdrop is clicked
   $('.mmodal-backdrop').click(function () {
-      $('.successModal').removeClass('d-block');
-      $('.errorModal').removeClass('d-block');
-      $('.successModal').addClass('d-none');
-      $('.errorModal').addClass('d-none');
+      $('.successModal').hide();
+      $('.errorModal').hide();
    });
 
 
@@ -99,4 +91,30 @@ $(document).click(function () {
 //*********************TOOLTIP*************************
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
+})
+
+//**************SELECT LANGUAGE************************
+$(document).ready(function() {
+
+  var selectedLanguage =  $("select.language").children("option:selected").val();
+    if(selectedLanguage==="EN") {
+      $('.en').show();     
+      $('.de').hide();
+    }
+    if(selectedLanguage==="DE") {
+      $('.de').show();
+      $('.en').hide();
+    }
+  $("select.language").change(function(){
+    var selectedLanguage = $(this).children("option:selected").val();
+    if(selectedLanguage==="EN") {
+      $('.en').show();     
+      $('.de').hide();
+    }
+    if(selectedLanguage==="DE") {
+      $('.de').show();
+      $('.en').hide();
+    }
+});
+
 })
