@@ -8,7 +8,7 @@ const header = document.querySelector("#main-nav"),
 var  aboutYPos = about.getBoundingClientRect().y-400,
      portfolioYPos = portfolio.getBoundingClientRect().y-1000;
      contactYPos = contact.getBoundingClientRect().y-700;
-   
+     
 //**********************SCROLL*************************
 document.addEventListener('scroll', () => {
 
@@ -45,7 +45,36 @@ $(btnUp).click(function () {
     document.documentElement.scrollTop = 0;
 });
 
+//**************SELECT LANGUAGE************************
+$(document).ready(function() {
+
+   selectedLanguage =  $("select.language").children("option:selected").val();
+    if(selectedLanguage==="EN") {
+      $('.en').show();     
+      $('.de').hide();
+
+    }
+    if(selectedLanguage==="DE") {
+      $('.de').show();
+      $('.en').hide();
+    
+    }
+  $("select.language").change(function(){
+    var selectedLanguage = $(this).children("option:selected").val();
+    if(selectedLanguage==="EN") {
+      $('.en').show();     
+      $('.de').hide();
+
+    }
+    if(selectedLanguage==="DE") {
+      $('.de').show();
+      $('.en').hide();
+     
+    }
+});
+});
 //**********************SUBMIT*************************
+
 // Send Email from Contact Me Form
 (function() {emailjs.init("user_BaOCdXuYxeh7WUDI7Fo7r")})();
 window.onload = function() {
@@ -56,29 +85,35 @@ window.onload = function() {
       emailjs.sendForm('contact_service', 'contact_form', this)
           .then(
                function() {
-                $('.successModal').show();
+                $('.successModal').removeClass('d-none');
+                $('.successModal').addClass('d-block');
                 $('#contact-form').find('input[type=text], input[type=email], textarea').val('');
             }, function() {
               error.style.display = "block";
-              $('.errorModal').show();
+              $('.errorModal').removeClass('d-none');
+              $('.errorModal').addClass('d-block');
             });   
   });
 }
 
   // Button to close modal for message sent
   $('.close-success').click(function () {
-      $('.successModal').hide();
+    $('.successModal').removeClass('d-block');
+    $('.successModal').addClass('d-none');
   });
 
   // Button to close modal for message not sent 
   $('.close-error').click(function () {
-      $('.errorModal').hide();
+    $('.errorModal').removeClass('d-block');
+    $('.errorModal').addClass('d-none');
   });
 
   // Modal closes when backdrop is clicked
   $('.mmodal-backdrop').click(function () {
-      $('.successModal').hide();
-      $('.errorModal').hide();
+    $('.successModal').removeClass('d-block');
+    $('.errorModal').removeClass('d-block');
+    $('.successModal').addClass('d-none');
+    $('.errorModal').addClass('d-none');
    });
 
 
@@ -93,28 +128,3 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-//**************SELECT LANGUAGE************************
-$(document).ready(function() {
-
-  var selectedLanguage =  $("select.language").children("option:selected").val();
-    if(selectedLanguage==="EN") {
-      $('.en').show();     
-      $('.de').hide();
-    }
-    if(selectedLanguage==="DE") {
-      $('.de').show();
-      $('.en').hide();
-    }
-  $("select.language").change(function(){
-    var selectedLanguage = $(this).children("option:selected").val();
-    if(selectedLanguage==="EN") {
-      $('.en').show();     
-      $('.de').hide();
-    }
-    if(selectedLanguage==="DE") {
-      $('.de').show();
-      $('.en').hide();
-    }
-});
-
-})
