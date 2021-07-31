@@ -7,7 +7,7 @@ const header = document.querySelector("#main-nav"),
 
 var  aboutYPos = about.getBoundingClientRect().y-400,
      portfolioYPos = portfolio.getBoundingClientRect().y-1000;
-     contactYPos = contact.getBoundingClientRect().y-700;
+     contactYPos = contact.getBoundingClientRect().y-1000;
      
 //**********************SCROLL*************************
 document.addEventListener('scroll', () => {
