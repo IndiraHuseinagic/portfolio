@@ -306,6 +306,10 @@ a.navbar-brand:hover {
 }
 
 /*Project Image*/
+.card, .card-img-top {
+    border-radius: 0;
+}
+
 .project-box {
     position: relative;
     width: 100%;
@@ -423,7 +427,11 @@ a.navbar-brand:hover {
     width: 100%;
 }
 
-/*Product Details*/
+.carousel-item hr {
+    margin-top: 0;
+}
+
+/*Project Details*/
 .project-show .btn-basic,
 .project-show .btn-second {
     border-radius: 20px;
@@ -439,23 +447,6 @@ a.navbar-brand:hover {
 
 .carousel-item hr {
     border: 1px solid #000;
-}
-
-/*Technologies*/
-.technology-icons {
-    color: var(--secondColor);
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-}
-
-.technology-icons i {
-    margin: 5px;
-}
-
-.project-tech {
-    color: var(--mainColor);
-    font-weight: bold;
 }
 
 /*Animations*/
@@ -653,11 +644,8 @@ a.navbar-brand:hover {
 
  /**********Extra Large devices only *************/
  @media (min-width: 1200px) {
+     
     /*PORTFOLIO*/
-    .project-title {
-        font-size: 40px;
-    }
-
     .modal-dialog {
         width: 60vw;
         margin: 0 auto;
@@ -669,13 +657,6 @@ a.navbar-brand:hover {
     
     .item-card i {
         font-size: 50px;
-    }
-    .technology-icons {
-        font-size: 50px;
-    }
-    
-    .technology-icons i {
-        margin: 10px;
     }
     
     .carousel-control-prev-icon {
@@ -698,10 +679,6 @@ a.navbar-brand:hover {
 @media (min-width: 992px) and (max-width: 1199px) {
     
     /*PORTFOLIO*/
-    .project-title {
-        font-size: 40px;
-    }
-
     .modal-dialog {
         width: 60vw;
         margin: 0 auto;
@@ -715,13 +692,6 @@ a.navbar-brand:hover {
         font-size: 50px;
     }
 
-    .technology-icons {
-        font-size: 50px;
-    }
-    
-    .technology-icons i {
-        margin: 10px;
-    }
     
     .carousel-control-prev-icon {
         top: 17vw;
@@ -743,21 +713,9 @@ a.navbar-brand:hover {
 @media (min-width: 768px) and (max-width: 991px) {
     
     /*PORTFOLIO*/
-    .project-title {
-        font-size: 40px;
-    }
-
     .modal-dialog {
         width: 70vw;
         margin: 0 auto;
-    }
-
-    .technology-icons {
-        font-size: 50px;
-    }
-    
-    .technology-icons i {
-        margin: 10px;
     }
 
     .carousel-control-prev-icon {
@@ -788,20 +746,7 @@ a.navbar-brand:hover {
     }
 
      /*PORTFOLIO*/
-     
-    .project-title {
-        font-size: 20px;
-    }
-
     .btn-project {
-        margin: 10px;
-    }
-
-    .technology-icons {
-        font-size: 50px;
-    }
-    
-    .technology-icons i {
         margin: 10px;
     }
 

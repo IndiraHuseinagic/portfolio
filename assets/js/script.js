@@ -38,41 +38,6 @@ document.addEventListener('scroll', () => {
     contact.classList.add("contact-active")
   }
 });
-
-// Go to the top 
-$(btnUp).click(function () {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
-
-//**************SELECT LANGUAGE************************
-$(document).ready(function() {
-
-   selectedLanguage =  $("select.language").children("option:selected").val();
-    if(selectedLanguage==="EN") {
-      $('.en').show();     
-      $('.de').hide();
-
-    }
-    if(selectedLanguage==="DE") {
-      $('.de').show();
-      $('.en').hide();
-    
-    }
-  $("select.language").change(function(){
-    var selectedLanguage = $(this).children("option:selected").val();
-    if(selectedLanguage==="EN") {
-      $('.en').show();     
-      $('.de').hide();
-
-    }
-    if(selectedLanguage==="DE") {
-      $('.de').show();
-      $('.en').hide();
-     
-    }
-});
-});
 //**********************SUBMIT*************************
 
 // Send Email from Contact Me Form
@@ -89,12 +54,17 @@ window.onload = function() {
                 $('.successModal').addClass('d-block');
                 $('#contact-form').find('input[type=text], input[type=email], textarea').val('');
             }, function() {
-              error.style.display = "block";
-              $('.errorModal').removeClass('d-none');
-              $('.errorModal').addClass('d-block');
+                $('.errorModal').removeClass('d-none');
+                $('.errorModal').addClass('d-block');
             });   
   });
 }
+
+  // Go to the top 
+  $(btnUp).click(function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
 
   // Button to close modal for message sent
   $('.close-success').click(function () {
@@ -115,6 +85,32 @@ window.onload = function() {
     $('.successModal').addClass('d-none');
     $('.errorModal').addClass('d-none');
    });
+
+//**************SELECT LANGUAGE************************
+$(document).ready(function() {
+
+   selectedLanguage = $("select.language").children("option:selected").val();
+    if(selectedLanguage === "EN") {
+      $('.en').show();     
+      $('.de').hide();
+    }
+    if(selectedLanguage === "DE") {
+      $('.de').show();
+      $('.en').hide(); 
+    }
+    
+  $("select.language").change(function(){
+    var selectedLanguage = $(this).children("option:selected").val();
+    if(selectedLanguage==="EN") {
+      $('.en').show();     
+      $('.de').hide();
+    }
+    if(selectedLanguage==="DE") {
+      $('.de').show();
+      $('.en').hide();    
+    }
+});
+});
 
 
 //*****************Navbar CLICK************************
