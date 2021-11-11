@@ -314,7 +314,7 @@ a.navbar-brand:hover {
     position: relative;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 30px; 
+    margin-bottom: 20px; 
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.2);
 }
    
@@ -691,7 +691,6 @@ a.navbar-brand:hover {
     .item-card i {
         font-size: 50px;
     }
-
     
     .carousel-control-prev-icon {
         top: 17vw;
@@ -753,7 +752,13 @@ a.navbar-brand:hover {
 }
 
 /**********Extra Small devices only *************/
-@media (max-width: 575px) {}
+@media (max-width: 360px) {
+
+    /*PORTFOLIO*/
+    .card-body{
+        font-size: 14px;
+    }
+}
 
 
 
